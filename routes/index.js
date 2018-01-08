@@ -6,5 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+const port = process.env.PORT || 3002;
+app.listen(port);
 
 module.exports = router;
