@@ -34,7 +34,7 @@ app.get('/api/purchases', (req, res) => {
       "date": "2017-12-08",
       "id": 1,
       "amount": 9.19,
-      "reason": "Money left over"
+      "reason": "A-trak tickets"
     },
     {
       "date": "2017-12-08",
