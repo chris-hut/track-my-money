@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
+router.get('/purchases', function (req, res, next) {
+  console.log('this route got hit');
   // And insert something like this instead:
   res.json([
     {

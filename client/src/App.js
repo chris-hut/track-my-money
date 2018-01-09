@@ -9,12 +9,13 @@ class App extends Component {
   state = {purchases: []};
 
   componentDidMount() {
-    fetch('/purchases')
+    fetch('/api/purchases')
       .then(res => res.json())
       .then(purchases => this.setState({purchases}));
   }
 
   render() {
+    debugger
     return (
       <Grid fluid>
         <Row center="xs">
@@ -55,10 +56,6 @@ class App extends Component {
       </Grid>
     );
   }
-}
-
-function formatPurchaseString(purchase) {
-  return `${purchase.date}: ${purchase.amount} for ${purchase.reason}`;
 }
 
 function formatFullPriceString(purchases) {
