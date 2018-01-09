@@ -34,13 +34,13 @@ app.get('/api/purchases', (req, res) => {
       "date": "2017-12-08",
       "id": 1,
       "amount": 9.19,
-      "reason": "A-trak tickets"
+      "reason": "A-Trak Ticket"
     },
     {
       "date": "2017-12-08",
       "id": 2,
       "amount": 30,
-      "reason": "Hotel Garuda Tickets"
+      "reason": "Hotel Garuda Ticket"
     },
     {
       "date": "2018-01-02",
