@@ -43,7 +43,7 @@ class App extends Component {
                     return (
                       <TableRow key={purchase.id}>
                         <TableCell>{purchase.date}</TableCell>
-                        <TableCell>{purchase.amount}</TableCell>
+                        <TableCell>${purchase.amount}</TableCell>
                         <TableCell>{purchase.reason}</TableCell>
                       </TableRow>
                     )
