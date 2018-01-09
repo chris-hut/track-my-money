@@ -8,7 +8,23 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var purchases = require('./routes/purchases');
 
-var app = express();
+const app = express();
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,3 +60,8 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+const port = process.env.PORT || 5000;
+app.listen(port);
+
+console.log(`App is running now on port ${port}`);
